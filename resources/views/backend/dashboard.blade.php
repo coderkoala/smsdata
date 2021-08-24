@@ -5,11 +5,13 @@
 @section('content')
     <x-backend.card>
         <x-slot name="header">
-            @lang('Welcome :Name', ['name' => $logged_in_user->name])
+            <h5 class="d-flex justify-content-between align-items-center">
+                Dashboard
+                {{-- <a href="{{route('admin.add-contact')}}" type="button" class="btn btn-sm btn-primary">Add new Contact</a> --}}
+            </h5>
         </x-slot>
 
         <x-slot name="body">
-            @lang('Welcome to the Dashboard')
         </x-slot>
     </x-backend.card>
 @endsection

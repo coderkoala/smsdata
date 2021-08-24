@@ -17,6 +17,31 @@
                 icon="c-sidebar-nav-icon cil-speedometer"
                 :text="__('Dashboard')" />
         </li>
+        <li class="c-sidebar-nav-item">
+            <x-utils.link
+                class="c-sidebar-nav-link"
+                :href="route('admin.sms')"
+                :active="activeClass(Route::is('admin.sms'), 'c-active')"
+                icon="c-sidebar-nav-icon cil-envelope-letter"
+                :text="__('Send New SMS')" />
+        </li>
+        <li class="c-sidebar-nav-item">
+            <x-utils.link
+                class="c-sidebar-nav-link"
+                :href="route('admin.contact')"
+                :active="activeClass(Route::is('admin.contact'), 'c-active')"
+                icon="c-sidebar-nav-icon cil-address-book"
+                :text="__('Contacts Management')" />
+        </li>
+
+        <li class="c-sidebar-nav-item">
+            <x-utils.link
+                :href="route('admin.category')"
+                class="c-sidebar-nav-link"
+                :text="__('Category Management')"
+                icon="c-sidebar-nav-icon cil-list-rich"
+                :active="activeClass(Route::is('admin.category'), 'c-active')" />
+        </li>
 
         @if (
             $logged_in_user->hasAllAccess() ||
