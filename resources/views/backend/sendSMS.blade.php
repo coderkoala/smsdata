@@ -10,8 +10,6 @@
             </h5>
         </x-slot>
 
-        {{-- Todo! Hide both Contact Group and Individual to SMS after you're done with view rendering! --}}
-
         <x-slot name="body">
             <form method="POST" action="{{route('admin.post-sms')}}">
                 @csrf
