@@ -1,12 +1,12 @@
 @extends('backend.layouts.app')
 
-@section('title', __('SMS Management Console'))
+@section('title', __('SMS Dashboard'))
 
 @section('content')
     <x-backend.card>
         <x-slot name="header">
             <h5 class="d-flex justify-content-between align-items-center">
-                SMS Management Console
+                SMS Management Service Dashboard
                 <a href="{{route('admin.new-sms')}}" type="button" class="btn btn-sm btn-primary">New SMS Dispatch</a>
             </h5>
         </x-slot>

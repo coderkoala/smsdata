@@ -12,6 +12,6 @@ class DashboardController
      */
     public function index()
     {
-        return view('backend.dashboard');
+        return view('backend.sendSMSDashboard');
     }
 }
