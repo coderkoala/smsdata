@@ -1,5 +1,5 @@
 <template>
-    <span>Laravel Boilerplate</span>
+    <span>Comptech SMS Management Center</span>
 </template>
 
 <script>
