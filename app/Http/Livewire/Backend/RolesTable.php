@@ -18,7 +18,7 @@ class RolesTable extends DataTableComponent
     public function query(): Builder
     {
         return Role::with('permissions:id,name,description')
-            ->withCount('users')
+            ->withCount('users_web')
             ->when($this->getFilter('search'), fn ($query, $term) => $query->search($term));
     }
 

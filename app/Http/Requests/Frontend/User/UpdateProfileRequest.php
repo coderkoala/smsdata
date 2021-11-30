@@ -31,7 +31,7 @@ class UpdateProfileRequest extends FormRequest
             'name' => ['required', 'max:100'],
             'email' => [Rule::requiredIf(function () {
                 return config('boilerplate.access.user.change_email');
-            }), 'max:255', 'email', Rule::unique('users')->ignore($this->user()->id)],
+            }), 'max:255', 'email', Rule::unique('users_web')->ignore($this->user()->id)],
         ];
     }
 }

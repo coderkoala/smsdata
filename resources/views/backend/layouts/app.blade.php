@@ -10,6 +10,9 @@
     <meta name="author" content="@yield('meta_author', 'Anthony Rappa')">
     @yield('meta')
     <livewire:styles />
+    <link href="{{ mix('css/backend.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/select2.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('/css/table.css') }}" rel="stylesheet" type="text/css">
     @stack('after-styles')
 </head>
 
@@ -51,9 +54,6 @@
         }
     </style>
     @stack('before-styles')
-    <link href="{{ mix('css/backend.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/select2.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('/css/table.css') }}" rel="stylesheet" type="text/css">
     <script src="{{ asset('/js/table.js') }}" type="text/javascript"></script>
     <script src="{{ asset('/js/select2.js') }}" type="text/javascript"></script>
     <script defer src="{{ asset('/js/custom.js') }}" type="text/javascript"></script>
