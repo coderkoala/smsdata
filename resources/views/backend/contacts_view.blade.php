@@ -11,7 +11,6 @@
             </h5>
         </x-slot>
 
-
         <x-slot name="body">
             <div class="form-group row">
                 <label for="CategoryID" class="col-4 col-form-label">Contact Category</label>

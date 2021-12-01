@@ -7,7 +7,10 @@
         <x-slot name="header">
             <h5 class="d-flex justify-content-between align-items-center">
                 Contacts Management
-                <a href="{{route('admin.add-contact')}}" type="button" class="btn btn-sm btn-primary">Add new Contact</a>
+                <div class="justify-content-between align-items-right">
+                    <a href="{{route('admin.add-contact')}}" type="button" class="btn btn-sm btn-primary">Add new Contact</a>
+                    <a href="{{route('admin.bulkAdd')}}" type="button" class="btn btn-sm btn-secondary">Bulk Add</a>
+                </div>
             </h5>
         </x-slot>
 

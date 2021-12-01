@@ -43,7 +43,7 @@ Route::get('contacts', [ContactController::class, 'index'])
     });
 
 // Add new Contact.
-Route::get('contact/add', [ContactController::class, 'add'])
+Route::get('contact/add1', [ContactController::class, 'add'])
     ->name('add-contact')
     ->breadcrumbs(function (Trail $trail) {
         $trail->push(__('Add New Contact'), route('admin.add-contact'));
@@ -51,6 +51,12 @@ Route::get('contact/add', [ContactController::class, 'add'])
 
 Route::post('contact/add', [ContactController::class, 'post'])
     ->name('store-contact');
+
+Route::get('contact/addM', [ContactController::class, 'bulkAdd'])
+    ->name('bulkAdd');
+
+Route::post('contact/addM', [ContactController::class, 'storebulk'])
+    ->name('storeBulkAdd');
 
 // Edit/View Contact.
 Route::get('contacts/edit/{id}', [ContactController::class, 'edit'])
