@@ -133,8 +133,8 @@ class ContactController
                 }
             }
         }
-        DB::commit();
         return $this->success = true;
+        DB::commit();
     }
 
     /**
@@ -156,8 +156,6 @@ class ContactController
         // Store $request->contactFile in storage...
         $filePtr = $request->contactFile;
         $filePtrRealExtension = $filePtr->getClientOriginalExtension();
-        // Get file extension from $filePtr
-
         $reader = null;
 
         switch ($filePtrRealExtension) {
@@ -175,9 +173,6 @@ class ContactController
             $spreadsheet = $reader->load($filePtr);
             $allSheets = $spreadsheet->getAllSheets();
 
-            // temp code
-            $allSheets = array_reverse($allSheets);
-            //temp code
             foreach ($allSheets as $sheet) {
                 // Reverse array $sheet.
                 $sheetData = $sheet->toArray();

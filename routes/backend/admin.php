@@ -28,11 +28,25 @@ Route::get('new-sms', [smsController::class, 'add'])
         $trail->push(__('SMS Management Console'), route('admin.new-sms'));
     });
 
+// New dispatch view.
+Route::get('new-sms-bulk', [smsController::class, 'bulk'])
+    ->name('new-sms-bulk')
+    ->breadcrumbs(function (Trail $trail) {
+        $trail->push(__('Send Bulk SMS'), route('admin.new-sms-bulk'));
+    });
+
 // New dispatch request.
 Route::post('new-sms', [smsController::class, 'post'])
     ->name('post-sms')
     ->breadcrumbs(function (Trail $trail) {
         $trail->push(__('SMS Management Console'), route('admin.post-sms'));
+    });
+
+// New dispatch request.
+Route::post('new-sms-bulk', [smsController::class, 'postBulk'])
+    ->name('post-sms-bulk')
+    ->breadcrumbs(function (Trail $trail) {
+        $trail->push(__('SMS Management Console'), route('admin.post-sms-bulk'));
     });
 
 // Contact Index.

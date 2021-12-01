@@ -7,6 +7,12 @@
         <x-slot name="header">
             <h5 class="d-flex justify-content-between align-items-center">
                 Create new SMS Dispatch Request
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="{{ route('admin.new-sms-bulk') }}" class="btn btn-sm btn-outline-primary">
+                        <i class="fas fa-envelope"></i>
+                        <span class="ml-1">Bulk Dispatch</span>
+                    </a>
+                </div>
             </h5>
         </x-slot>
 
@@ -18,11 +24,11 @@
                   <div class="col-8">
                     <div class="custom-control custom-radio custom-control-inline">
                       <input name="dispatchType" id="dispatchType_0" type="radio" class="custom-control-input" value="single" required="required">
-                      <label for="dispatchType_0" class="custom-control-label">Single SMS</label>
+                      <label for="dispatchType_0" class="custom-control-label">Send SMS Individually</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
                       <input name="dispatchType" id="dispatchType_1" type="radio" class="custom-control-input" value="bulk" required="required">
-                      <label for="dispatchType_1" class="custom-control-label">Bulk SMS</label>
+                      <label for="dispatchType_1" class="custom-control-label">Send SMS to group</label>
                     </div>
                   </div>
                 </div>
