@@ -31,21 +31,6 @@
             </div>
         </div>
     </div>
-
-    <div class="col-sm-6 col-lg-3">
-        <div class="card text-white bg-info">
-            <div class="card-body card-body pb-0 d-flex justify-content-between align-items-start">
-                <div>
-                    <div class="text-value-lg">{{App\Models\models\Contacts::where('IsLive', 'Y')->count()}}</div>
-                    <div>Total Contacts</div>
-                </div>
-            </div>
-            <div class="c-chart-wrapper mt-3" style="height: 70px">
-                <canvas class="chart" id="card-chart3" height="70"></canvas>
-            </div>
-        </div>
-    </div>
-
     <div class="col-sm-6 col-lg-3">
         <div class="card text-white bg-danger">
             <div class="card-body card-body pb-0 d-flex justify-content-between align-items-start">
@@ -56,6 +41,19 @@
             </div>
             <div class="c-chart-wrapper mt-3 mx-3" style="height: 70px">
                 <canvas class="chart" id="card-chart4" height="70"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        <div class="card text-white bg-info">
+            <div class="card-body card-body pb-0 d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="text-value-lg">{{App\Models\models\Contacts::where('IsLive', 'Y')->count()}}</div>
+                    <div>Total Contacts</div>
+                </div>
+            </div>
+            <div class="c-chart-wrapper mt-3" style="height: 70px">
+                <canvas class="chart" id="card-chart3" height="70"></canvas>
             </div>
         </div>
     </div>
